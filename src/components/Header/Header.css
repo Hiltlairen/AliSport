@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .cart-icon {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }

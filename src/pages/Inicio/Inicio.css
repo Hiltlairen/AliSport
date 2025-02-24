@@ -1,0 +1,10 @@
+.inicio {
+    padding: 2rem;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 1rem;
+    margin-top: 2rem;
+  }
