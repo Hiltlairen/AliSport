@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './PerfilTienda.css';
-
+import Sidebar from '../Sidebar/Sidebar';
 const PerfilTienda = () => {
   const [tienda, setTienda] = useState({
     nombre: 'Tienda Deportiva',
@@ -19,7 +19,9 @@ const PerfilTienda = () => {
   };
 
   return (
+    
     <div className="perfil-tienda">
+      <Sidebar /> {/* Llamar al Sidebar */}
       <h1>Perfil de Tienda</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -53,7 +55,9 @@ const PerfilTienda = () => {
         </div>
         <button type="submit">Guardar Cambios</button>
       </form>
+      
     </div>
+
   );
 };
 

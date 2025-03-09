@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Promociones.css';
-
+import Sidebar from '../Sidebar/Sidebar';
 const Promociones = () => {
   const [promociones, setPromociones] = useState([
     { id: 1, nombre: 'Descuento del 10%', descripcion: 'En todas las chaquetas' },
@@ -13,6 +13,7 @@ const Promociones = () => {
 
   return (
     <div className="promociones">
+       <Sidebar /> {/* Llamar al Sidebar */}
       <h1>Promociones</h1>
       <button className="btn-agregar">Crear Promoción</button>
       <div className="lista-promociones">

@@ -17,6 +17,7 @@ import Promociones from "./components/Promociones/Promociones";
 import PerfilTienda from "./components/PerfilTienda/PerfilTienda";
 
 import QuienesSomos from "./pages/QuienesSomos/QuienesSomos";
+import Pedidos from "./components/Pedidos/Pedidos";
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
           <Route path="/panel-control" element={<PanelControl />} />
           <Route path="/productos" element={<MisProductos />} />
           <Route path="/cotizaciones" element={<Cotizaciones />} />
-          <Route path="/pedidos" element={<Cotizaciones />} />
+          <Route path="/pedidos" element={<Pedidos />} />
           <Route path="/promociones" element={<Promociones />} />
           <Route path="/perfil" element={<PerfilTienda />} />
           <Route path="/quienes" element={<QuienesSomos />} />

@@ -1,29 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Sidebar from '../Sidebar/Sidebar'; // Importar el Sidebar
 import './MisProductos.css';
 
 const MisProductos = () => {
-  const [productos, setProductos] = useState([
+  const productos = [
     { id: 1, nombre: 'Polera Negra', precio: '$20' },
     { id: 2, nombre: 'Chamarra Azul', precio: '$50' },
-  ]);
-
-  const eliminarProducto = (id) => {
-    setProductos(productos.filter((producto) => producto.id !== id));
-  };
+  ];
 
   return (
-    <div className="mis-productos">
-      <h1>Mis Productos</h1>
-      <button className="btn-agregar">Agregar Producto</button>
-      <div className="lista-productos">
-        {productos.map((producto) => (
-          <div key={producto.id} className="producto">
-            <h3>{producto.nombre}</h3>
-            <p>{producto.precio}</p>
-            <button onClick={() => eliminarProducto(producto.id)}>Eliminar</button>
-            <button>Editar</button>
-          </div>
-        ))}
+    <div className="dashboard">
+      <Sidebar /> {/* Llamar al Sidebar */}
+      <div className="mis-productos">
+        <h1>Mis Productos</h1>
+        <div className="lista-productos">
+          {productos.map((producto) => (
+            <div key={producto.id} className="producto">
+              <h3>{producto.nombre}</h3>
+              <p>{producto.precio}</p>
+              <button>Editar</button>
+              <button>Eliminar</button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
