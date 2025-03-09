@@ -12,6 +12,7 @@ function Inicio() {
         {productos.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+        
       </div>
     </div>
   );

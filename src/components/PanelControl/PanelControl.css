@@ -1,0 +1,32 @@
+.panel-control {
+    padding: 20px;
+  }
+  
+  .panel-control h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .resumen {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .tarjeta {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .tarjeta h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta p {
+    font-size: 1.5rem;
+    color: #007bff;
+  }

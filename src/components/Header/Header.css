@@ -1,4 +1,26 @@
+/* Estilos para la barra de navegación */
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilos para el logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Evita que el logo se reduzca demasiado */
+}
+
+.logo img {
+  height: 60px; /* Ajuste de tamaño para mejor integración *//* Estilos para la barra de navegación */
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,10 +32,20 @@
     z-index: 1000;
   }
   
-  .logo img {
-    height: 50px;
+  /* Estilos para el logo */
+  .logo {
+    flex-grow: 1; /* Permite que el logo ocupe más espacio */
+    display: flex;
+    justify-content: center;
   }
   
+  .logo img {
+    height: 80px;
+    max-width: 100%;
+    object-fit: contain; /* Mantiene el tamaño sin deformarlo */
+  }
+  
+  /* Estilos para la navegación */
   .nav {
     display: flex;
     align-items: center;
@@ -33,3 +65,61 @@
     color: white;
     text-decoration: none;
   }
+  
+  /* Estilos para el botón de Inicio de Sesión */
+  .login-button {
+    background-color: #4CAF50; /* Color verde */
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .login-button:hover {
+    background-color: #45a049; /* Color verde más oscuro al hacer hover */
+  }
+  
+  max-width: 150px; /* Define un tamaño máximo */
+  object-fit: contain;
+}
+
+/* Estilos para la navegación */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto; /* Empuja la navegación a la derecha */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para el botón de Inicio de Sesión */
+.login-button {
+  background-color: #4CAF50; /* Color verde */
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background-color: #45a049; /* Color verde más oscuro al hacer hover */
+}

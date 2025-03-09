@@ -1,0 +1,65 @@
+/* Estilos generales */
+.quienes-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, #dae483, #4f46e5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .quienes-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .quienes-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* Sección de contenido */
+  .quienes-section {
+    max-width: 800px;
+    background: white;
+    color: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .quienes-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2564eb73;
+    margin-bottom: 1rem;
+  }
+  
+  .quienes-list {
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .quienes-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .quienes-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+  }
+  

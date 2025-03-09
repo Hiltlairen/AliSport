@@ -1,5 +1,17 @@
-/* Estilos para el componente App */
+/* Estilos globales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para el contenido principal */
 main {
   flex: 1;
-  padding: 2rem;
+  padding: 20px;
 }

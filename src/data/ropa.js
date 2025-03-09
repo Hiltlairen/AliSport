@@ -1,50 +1,36 @@
 export const productos = [
-    {
-      id: 1,
-      name: 'Polera Negra',
-      price: '$20',
-      image: '/images/fassion',
+  {
+    id: 1,
+    name: 'Polera Negra',
+    price: '$20',
+    imagenes: ['/images/black.png', '/images/black2.png'], // Múltiples imágenes
+    descripcion: 'Polera negra de alta calidad, ideal para uso diario o deportivo.',
+    tienda: {
+      nombre: 'Tienda Deportiva',
+      descripcion: 'Especialistas en ropa deportiva de alta calidad.',
     },
-    {
-      id: 2,
-      name: 'Chamarra Azul',
-      price: '$50',
-      image: '/images/chamarra-azul.png',
+  },
+  {
+    id: 2,
+    name: 'Chamarra Azul',
+    price: '$50',
+    imagenes: ['/images/chamarra-azul.png'],
+    descripcion: 'Chamarra azul impermeable, perfecta para climas fríos.',
+    tienda: {
+      nombre: 'Tienda de Abrigos',
+      descripcion: 'Abrigos y chamarras para todas las estaciones.',
     },
-    {
-      id: 3,
-      name: 'Buso Deportivo Gris',
-      price: '$30',
-      image: '/images/fassion',
+  },
+  {
+    id: 3,
+    name: 'Buso Deportivo Gris',
+    price: '$30',
+    imagenes: ['/images/fassion.png'],
+    descripcion: 'Buso deportivo gris, cómodo y elegante.',
+    tienda: {
+      nombre: 'Tienda Deportiva',
+      descripcion: 'Especialistas en ropa deportiva de alta calidad.',
     },
-    {
-      id: 4,
-      name: 'Polera verde',
-      price: '$25',
-      image: '/images/green.png',
-    },
-    {
-      id: 5,
-      name: 'Polera Blanca',
-      price: '$25',
-      image: '/images/polera-blanca.png',
-    },
-    {
-        id: 6,
-        name: 'Polera Blanca',
-        price: '$25',
-        image: '/images/red.png',
-      },
-    {
-        id: 7,
-        name: 'Polera Blanca',
-        price: '$25',
-        image: '/images/polera-blanca.png',
-      },
-      {
-        id: 8,
-        name: 'Polera Blanca2',
-        price: '$25',
-        image: '/images/black.png',
-      },
-  ];
+  },
+  // Agrega más productos según sea necesario
+];
