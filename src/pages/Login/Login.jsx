@@ -1,21 +1,49 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí iría la lógica para manejar la autenticación del usuario
-    console.log('Iniciando sesión con', email, password);
+
+    try {
+      const response = await fetch('http://localhost/login.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Guardar el usuario en el estado global o en localStorage
+        localStorage.setItem('user', JSON.stringify(data.user));
+        // Redirigir al usuario según su tipo
+        if (data.user.tipo === 'cliente') {
+          navigate('/dashboard-cliente');
+        } else if (data.user.tipo === 'vendedor') {
+          navigate('/dashboard-vendedor');
+        }
+      } else {
+        setError(data.message);
+      }
+    } catch (error) {
+      setError('Error al conectar con el servidor');
+    }
   };
 
   return (
     <div className="login-page">
       <div className="login-container">
         <h1>Iniciar Sesión (Cliente)</h1>
+        {error && <p className="error-message">{error}</p>}
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="input-container">
             <input 
