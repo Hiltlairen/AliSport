@@ -4,12 +4,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem; /* Padding más pequeño */
-  background-color: #333;
-  color: white;
+  background-color: transparent; /* Fondo transparente */
+  color: black; /* Texto en negro */
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 40px; /* Altura fija para el header */
+  height: 60px; /* Ajustada la altura del header para el logo más grande */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil cuando se quede sticky */
 }
 
 /* Estilos para el logo */
@@ -27,35 +28,37 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem; /* Aumento del espacio entre los elementos */
 }
 
 .nav-button {
   background: none;
   border: none;
-  color: white;
+  color: black; /* Texto negro */
   cursor: pointer;
   font-size: 0.9rem; /* Tamaño de fuente más pequeño */
   padding: 0.5rem;
+  transition: color 0.3s ease;
 }
 
 .nav-button:hover {
-  color: #4CAF50; /* Cambia el color al hacer hover */
+  color: #6a1b9a; /* Morado al hacer hover */
 }
 
 .cart-icon {
   font-size: 1.2rem; /* Tamaño del ícono del carrito */
-  color: white;
+  color: black; /* Texto negro */
   text-decoration: none;
+  margin-right: 1.5rem; /* Añadir un poco de margen a la derecha del ícono */
 }
 
 .cart-icon:hover {
-  color: #4CAF50; /* Cambia el color al hacer hover */
+  color: #6a1b9a; /* Morado al hacer hover */
 }
 
 /* Estilos para el botón de Inicio de Sesión */
 .login-button {
-  background-color: #4CAF50; /* Color verde */
+  background-color: #8e24aa; /* Morado más oscuro */
   border: none;
   color: white;
   padding: 0.5rem 1rem;
@@ -63,8 +66,9 @@
   cursor: pointer;
   font-size: 0.9rem; /* Tamaño de fuente más pequeño */
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-  background-color: #45a049; /* Color verde más oscuro al hacer hover */
+  background-color: #7b1fa2; /* Morado más oscuro al hacer hover */
 }
