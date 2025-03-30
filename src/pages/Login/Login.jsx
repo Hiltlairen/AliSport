@@ -10,57 +10,34 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost/login.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        // Guardar el usuario en el estado global o en localStorage
-        localStorage.setItem('user', JSON.stringify(data.user));
-        // Redirigir al usuario según su tipo
-        if (data.user.tipo === 'cliente') {
-          navigate('/dashboard-cliente');
-        } else if (data.user.tipo === 'vendedor') {
-          navigate('/dashboard-vendedor');
-        }
-      } else {
-        setError(data.message);
-      }
-    } catch (error) {
-      setError('Error al conectar con el servidor');
-    }
+    // Lógica de inicio de sesión
   };
 
   return (
     <div className="login-page">
       <div className="login-container">
-        <h1>Iniciar Sesión (Cliente)</h1>
+        <div className="logo-container">
+          <img src="/logo.png" alt="Logo de AliSport" className="login-logo" />
+          <h1 id='inicio'>Iniciar Sesión</h1>
+        </div>
         {error && <p className="error-message">{error}</p>}
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="input-container">
-            <input 
-              type="email" 
-              placeholder="Correo electrónico" 
+            <input
+              type="email"
+              placeholder="Correo electrónico"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required 
+              required
             />
           </div>
           <div className="input-container">
-            <input 
-              type="password" 
-              placeholder="Contraseña" 
+            <input
+              type="password"
+              placeholder="Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required 
+              required
             />
           </div>
           <button type="submit" className="submit-btn">Iniciar Sesión</button>

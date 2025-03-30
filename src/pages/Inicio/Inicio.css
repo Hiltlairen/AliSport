@@ -1,7 +1,7 @@
 .inicio {
   padding: 2rem;
+  overflow-x: hidden; /* Añade esta línea */
 }
-
 /* Diseño de la cuadrícula de productos */
 .product-grid {
   display: grid;

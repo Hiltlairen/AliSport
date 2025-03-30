@@ -1,53 +1,135 @@
+/* Fondo animado o degradado */
 .seller-register-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del formulario */
+.seller-register-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+#inicio {
+  padding-left: 0%;
+}
+/* Logo y título */
+.logo-container {
+  margin-bottom: 1.5rem;
+}
+
+.seller-register-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.seller-register-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Estilos para los inputs y botón */
+.seller-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.seller-register-form h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.seller-register-form input,
+.seller-register-form textarea,
+.seller-register-form select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.seller-register-form input:focus,
+.seller-register-form textarea:focus,
+.seller-register-form select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Enlaces */
+.seller-register-links {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.seller-register-links a {
+  color: #4CAF50;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.seller-register-links a:hover {
+  color: #45a049;
+  text-decoration: underline;
+}
+
+/* Animaciones de entrada para el formulario */
+.seller-register-container {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .seller-register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .seller-register-form input {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .seller-register-form button {
-    padding: 0.5rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .seller-register-form button:hover {
-    background-color: #45a049;
-  }
-  
-  .seller-register-links {
-    margin-top: 1rem;
-    text-align: center;
-  }
-  
-  .seller-register-links a {
-    color: #4CAF50;
-    text-decoration: none;
-  }
-  
-  .seller-register-links a:hover {
-    text-decoration: underline;
-  }
+}

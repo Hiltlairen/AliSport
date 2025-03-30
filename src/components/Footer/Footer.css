@@ -1,11 +1,21 @@
+/* Estilos para el footer */
 .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .footer p {
-    margin: 0.5rem 0;
-  }
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px; /* Ancho máximo para el contenido */
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 0 1rem; /* Padding lateral */
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}

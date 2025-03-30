@@ -1,24 +1,41 @@
-/* Contenedor de la página de login */
+/* Fondo animado o degradado */
 .login-page {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
+  animation: gradientAnimation 10s ease infinite;
 }
 
-/* Contenedor del formulario de login */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del formulario */
 .login-container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
   text-align: center;
 }
 
-/* Título */
+/* Logo y título */
+.logo-container {
+  margin-bottom: 1.5rem;
+}
+
+.login-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
 .login-container h1 {
   font-size: 2rem;
   color: #333;
@@ -26,7 +43,7 @@
   font-weight: 600;
 }
 
-/* Estilo para los inputs */
+/* Estilos para los inputs y botón */
 .input-container {
   margin-bottom: 1rem;
 }
@@ -45,7 +62,6 @@
   outline: none;
 }
 
-/* Estilo para el botón de inicio de sesión */
 .submit-btn {
   width: 100%;
   padding: 0.75rem;
@@ -61,8 +77,10 @@
 .submit-btn:hover {
   background-color: #45a049;
 }
-
-/* Enlaces de registro y login de vendedor */
+#inicio {
+  padding-left: 0%;
+}
+/* Enlaces */
 .login-links {
   margin-top: 1rem;
   display: flex;
@@ -80,20 +98,4 @@
 .login-links a:hover {
   color: #45a049;
   text-decoration: underline;
-}
-
-/* Animaciones de entrada para el formulario */
-.login-container {
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

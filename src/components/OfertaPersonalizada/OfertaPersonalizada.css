@@ -1,0 +1,64 @@
+.oferta-container {
+    width: 100vw;
+    height: 30vh; /* 30% del alto de la pantalla */
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  
+  .oferta-contenido {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+  }
+  
+  .oferta-contenido h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .oferta-contenido p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .oferta-boton {
+    padding: 0.8rem 2rem;
+    background-color: white;
+    color: #ff6b6b;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .oferta-boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .oferta-contenido h2 {
+      font-size: 1.8rem;
+    }
+    
+    .oferta-contenido p {
+      font-size: 1rem;
+    }
+    
+    .oferta-boton {
+      padding: 0.6rem 1.5rem;
+    }
+  }
